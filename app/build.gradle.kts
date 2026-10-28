@@ -24,8 +24,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 
     buildFeatures {
@@ -56,4 +56,8 @@ dependencies {
     implementation("net.java.dev.jna:jna:5.14.0@aar")
 
     testImplementation("junit:junit:4.13.2")
+}
+
+kotlin {
+    jvmToolchain(21)
 }
