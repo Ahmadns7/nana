@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NaNa</string>
+    <string name="a11y_label">NaNa voice control</string>
+    <string name="a11y_desc">Lets NaNa press back, home, recents, notifications, and read the text on screen when you use voice commands. NaNa does not send anything off the device.</string>
+    <string name="notif_channel">NaNa listening</string>
+</resources>
