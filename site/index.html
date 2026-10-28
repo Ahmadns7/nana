@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NaNa by MercuReal: offline voice assistant for Android</title>
+<meta name="description" content="NaNa is an offline, voice-controlled Android assistant by MercuReal Tech Solutions. Say nana, then a command. Nothing leaves your phone.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <span class="brand">MercuReal</span>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#build">Build</a>
+    <a href="#license">License</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">MercuReal Tech Solutions</p>
+    <h1>NaNa</h1>
+    <p class="tagline">Your phone. In your words.</p>
+    <p class="lead">Say <strong>"nana"</strong>, then a command. Speech recognition and text-to-speech run on your phone, offline. No internet permission. Nothing leaves the device.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/Ahmadns7/nana/releases">Download APK</a>
+      <a class="btn ghost" href="https://github.com/Ahmadns7/nana">View source</a>
+    </div>
+    <p class="note">Android 10 or newer. Debug build for now.</p>
+  </section>
+
+  <section id="features" class="features">
+    <h2>What it does</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Wake word "nana"</h3>
+        <p>Say "nana" and then a command. Say "nana" alone and it opens an 8 second window for the next phrase.</p>
+      </article>
+      <article class="card">
+        <h3>Offline speech and voice</h3>
+        <p>Vosk recognizes your speech on the device. The system offline text-to-speech talks back. No cloud, no account.</p>
+      </article>
+      <article class="card">
+        <h3>Foreground service</h3>
+        <p>Listening keeps running when you switch apps, so you do not have to keep NaNa open.</p>
+      </article>
+      <article class="card">
+        <h3>Screen reading</h3>
+        <p>With the accessibility service on, NaNa reads visible text, taps buttons by label, scrolls, and presses back, home, recents and notifications.</p>
+      </article>
+    </div>
+    <ul class="commands">
+      <li>"nana open camera" or "launch" an app</li>
+      <li>"nana call" a number or a contact name</li>
+      <li>"nana press back", "go home", "recents", "open notifications"</li>
+      <li>"nana read screen", "scroll down", "tap" a button label</li>
+      <li>"nana what time is it", "help", "stop listening"</li>
+    </ul>
+  </section>
+
+  <section id="build" class="build">
+    <h2>Build from source</h2>
+    <p>Needs JDK 17 or 21 and the Android SDK with platform android-36.</p>
+    <ol>
+      <li>Clone <code>github.com/Ahmadns7/nana</code>.</li>
+      <li>Put the Vosk model <code>vosk-model-small-en-us-0.15</code> into <code>app/src/main/assets/model</code>. The model is not in the repo because of its size.</li>
+      <li>Set <code>sdk.dir</code> in <code>local.properties</code>.</li>
+      <li>Run <code>./gradlew :app:testDebugUnitTest :app:assembleDebug</code>.</li>
+      <li>Install <code>app/build/outputs/apk/debug/app-debug.apk</code>.</li>
+    </ol>
+    <p class="note">Voice, wake word and screen reading are untested on a real phone so far. Test it and report back.</p>
+  </section>
+
+  <section id="license" class="license">
+    <h2>License</h2>
+    <p>NaNa is MIT licensed, Copyright (c) 2026 MercuReal Tech Solutions. See the LICENSE file in the repository.</p>
+  </section>
+</main>
+
+<footer>
+  <p>MercuReal Tech Solutions. NaNa, MIT licensed.</p>
+</footer>
+</body>
+</html>
